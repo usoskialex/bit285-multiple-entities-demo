@@ -11,18 +11,15 @@ namespace IndyBooks.Controllers
     {
         BookstoreDbContext db = new BookstoreDbContext();
 
-        public ActionResult Create()
+        public ActionResult AddBook()
         {
             return View();
         }
 
         [HttpPost]
-        public ActionResult Create(Book newBook)
+        public ActionResult AddBook(Book newBook)
         {
-            //TODO: Add the new book to the database
-
-
-            return View();
+             return View(db.Books);
         }
 
         public ActionResult Search()
@@ -33,13 +30,7 @@ namespace IndyBooks.Controllers
         [HttpPost]
         public ActionResult Search(Book searchBook)
         {
-            //TODO: add logic to return all books if the search is empty
-
             var foundBooks = db.Books.Where(b => b.Author == searchBook.Author);
-
-            //TODO: add logic to search by Title (Note: you will need to adjust the View and ViewModel)
-
-            //TODO: add logic to return a search on price between a low and high number (Note: you will need to adjust the View and ViewModel)
 
             return View("SearchResult", foundBooks);
         }

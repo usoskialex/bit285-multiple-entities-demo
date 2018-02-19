@@ -113,7 +113,7 @@
   <ItemGroup>
     <Content Include="Views\web.config" />
     <None Include="packages.config" />
-    <Content Include="Views\Home\Create.cshtml" />
+    <Content Include="Views\Home\AddBook.cshtml" />
     <Content Include="Views\Home\Search.cshtml" />
     <Content Include="Views\Home\SearchResult.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
