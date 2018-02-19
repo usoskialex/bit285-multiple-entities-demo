@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using System.Web.Optimization
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -12,16 +13,17 @@
         <h1>Indy Books</h1>
         <h2>Your Place for Reading</h2>
     </header>
-    <nav>@Html.ActionLink("Search", "Search") 
+    <nav>
+        @Html.ActionLink("Search", "Search")
     @Html.ActionLink("Add New Book", "Create")
 </nav>
-    <div class="container body-content">
-        @RenderBody()
-    </div>
+<div class="container body-content">
+    @RenderBody()
+</div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/jqueryval")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/jqueryval")
+@Scripts.Render("~/bundles/bootstrap")
+@RenderSection("scripts", required: false)
 </body>
 </html>
