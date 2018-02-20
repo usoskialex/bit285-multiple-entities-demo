@@ -29,4 +29,5 @@ header>h2{font-size:1.8em;color:goldenrod;margin:0;}
 h3{font-size:1.3em;color:black;}
 nav{position:absolute;top:50px;right:50px;}
 nav>a{display:block;}
+.sub-link { position: absolute;right: 50px;top: 120px;}
 

@@ -16,7 +16,7 @@ namespace bit285_multiple_entities_demo
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Search", id = UrlParameter.Optional }
+                defaults: new { controller = "Home", action = "Purchase", id = UrlParameter.Optional }
             );
         }
     }

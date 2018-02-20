@@ -10,10 +10,8 @@ namespace IndyBooks.Models
     {
         [Key]
         public int PurchaseID { get; set; }
-        public decimal Amount { get; set; }
-        public int BookID { get; set; }
-
-        public virtual ICollection<Book> Books { get; set; }
+        public decimal Amount { get; set; } // The purchase price of the book
+        public int BookID { get; set; }     // The book purchased
 
     }
 }

@@ -11,36 +11,12 @@ namespace IndyBooks.Controllers
     {
         BookstoreDbContext db = new BookstoreDbContext();
 
-        public ActionResult AddBook()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public ActionResult AddBook(Book newBook)
-        {
-             return View(db.Books);
-        }
-
-        public ActionResult Search()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public ActionResult Search(Book searchBook)
-        {
-            var foundBooks = db.Books.Where(b => b.Author == searchBook.Author);
-
-            return View("SearchResult", foundBooks);
-        }
-
+        /*
+         * Purchase Creation and List
+         */
         public ActionResult Purchase()
         {
-            Purchase p = new Purchase();
-            p.Books = db.Books.ToList();
-
-            return View(p);
+             return View();
         }
         [HttpPost]
         public ActionResult Purchase(Purchase purchase)
@@ -49,11 +25,31 @@ namespace IndyBooks.Controllers
             {
                 db.Purchases.Add(purchase);
                 db.SaveChanges();
-                return View("Purchased", db.Purchases);
+                return View("Purchases", db.Purchases);
             }
-            
+            return View();
+        }
+        /*
+         * Book Creation and List
+         * TODO: Update methods and Views to Book create and list Books 
+         */
+        public ActionResult AddBook()
+        {
             return View();
         }
 
+        [HttpPost]
+        public ActionResult AddBook(Book book)
+        {
+            return View();
+        }
+        /*
+          * Author Creation and List
+          * TODO: Develop methods and Views to create and list Authors 
+          */
+        /*
+          * Member Creation and List
+          * TODO: Develop methods and Views to create and list Members 
+          */
     }
 }

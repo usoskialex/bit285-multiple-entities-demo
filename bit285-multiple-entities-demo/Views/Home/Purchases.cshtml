@@ -1,0 +1,35 @@
+﻿@model IEnumerable<IndyBooks.Models.Purchase>
+
+@{
+    ViewBag.Title = "Purchases";
+}
+<h2>View Sales</h2>
+
+<span class="sub-link">
+    @Html.ActionLink("New Sale", "Purchase")
+</span>
+<hr />
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Amount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BookID)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Amount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BookID)
+            </td>
+        </tr>
+    }
+
+</table>

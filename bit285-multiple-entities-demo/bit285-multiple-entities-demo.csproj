@@ -142,12 +142,12 @@
       <DependentUpon>201802192330219_purchase.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Author.cs" />
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\BookstoreDbContext.cs" />
     <Compile Include="Models\Member.cs" />
     <Compile Include="Models\Purchase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModels\PurchaseViewModel.cs" />
     <Compile Include="ViewModels\SearchViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -161,7 +161,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Home\Purchase.cshtml" />
-    <Content Include="Views\Home\Purchased.cshtml" />
+    <Content Include="Views\Home\Purchases.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

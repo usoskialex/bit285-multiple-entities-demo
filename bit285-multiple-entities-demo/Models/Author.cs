@@ -5,13 +5,13 @@ using System.Web;
 
 namespace IndyBooks.Models
 {
-    public class Member
+    public class Author
     {
-        public int MemberID { get; set; }
+        public int AuthorID { get; set; }
 
         // TODO: Create at least three  appropriate properties
 
-        // TODO: Add Property to represent the entity relationship: "A Member can have many Purchases"
+        // TODO: Add Property to represent the entity relationship: "An Author can write many Books"
 
     }
 }

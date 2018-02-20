@@ -61,13 +61,20 @@ namespace bit285_multiple_entities_demo.Migrations
                     Price = 9.95M
 
                 });
+            //TODO: Add several Author records
+
+            //TODO: Add several Member records
+
+            //TODO: Add additional Purchase records
             context.Purchases.AddOrUpdate(p => p.PurchaseID,
                 new Purchase()
                 {
                     PurchaseID = 1,
                     Amount = 10.00M,
                     BookID = 6
+                    //TODO: Add the MemberID value
                 });
+
         }
     }
 }

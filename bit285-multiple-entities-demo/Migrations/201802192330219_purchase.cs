@@ -15,18 +15,16 @@ namespace bit285_multiple_entities_demo.Migrations
                         Amount = c.Decimal(nullable: false, precision: 18, scale: 2),
                         BookID = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.PurchaseID);
+                .PrimaryKey(t => t.PurchaseID)
+                .ForeignKey("dbo.Books", t => t.BookID, cascadeDelete: true)
+                .Index(t => t.BookID);
             
-            AddColumn("dbo.Books", "Purchase_PurchaseID", c => c.Int());
-            CreateIndex("dbo.Books", "Purchase_PurchaseID");
-            AddForeignKey("dbo.Books", "Purchase_PurchaseID", "dbo.Purchases", "PurchaseID");
         }
         
         public override void Down()
         {
-            DropForeignKey("dbo.Books", "Purchase_PurchaseID", "dbo.Purchases");
-            DropIndex("dbo.Books", new[] { "Purchase_PurchaseID" });
-            DropColumn("dbo.Books", "Purchase_PurchaseID");
+            DropForeignKey("dbo.Purchases", "BookID", "dbo.Books");
+            DropIndex("dbo.Purchases", new[] { "BookID" });
             DropTable("dbo.Purchases");
         }
     }
