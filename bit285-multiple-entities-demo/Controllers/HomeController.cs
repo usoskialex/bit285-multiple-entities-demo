@@ -34,5 +34,26 @@ namespace IndyBooks.Controllers
 
             return View("SearchResult", foundBooks);
         }
+
+        public ActionResult Purchase()
+        {
+            Purchase p = new Purchase();
+            p.Books = db.Books.ToList();
+
+            return View(p);
+        }
+        [HttpPost]
+        public ActionResult Purchase(Purchase purchase)
+        {
+            if(ModelState.IsValid)
+            {
+                db.Purchases.Add(purchase);
+                db.SaveChanges();
+                return View("Purchased", db.Purchases);
+            }
+            
+            return View();
+        }
+
     }
 }

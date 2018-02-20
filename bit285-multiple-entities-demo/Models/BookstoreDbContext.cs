@@ -14,11 +14,13 @@ namespace IndyBooks.Models
      // Entity representing all the books
         public DbSet<Book> Books { get; set; }
 
-      // Entitys representing store members
+      // Entity representing store members
         public DbSet<Member> Members { get; set; }
 
-     // Virtual Entity representing member purchases
-        public virtual ICollection<Book> Purchases { get; set; }
+     // Entity representing purchases
+        public DbSet<Purchase> Purchases { get; set; }
+
+
 
     }
 }

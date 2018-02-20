@@ -9,9 +9,11 @@ namespace IndyBooks.Models
     {
         public int MemberID { get; set; }
 
-     // Create at least three other appropriate properties
+        // Create at least three other appropriate properties
 
-     
+        //// Virtual Entity representing member purchases
+        //public virtual ICollection<Purchase> Purchases { get; set; }
+        //public int PurchaseID { get; set; }
 
     }
 }
