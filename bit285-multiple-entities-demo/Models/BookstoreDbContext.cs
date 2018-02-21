@@ -8,17 +8,23 @@ namespace IndyBooks.Models
 {
     public class BookstoreDbContext : DbContext
     {
-     //Constructor - gives the name of the database
+        //Constructor - gives the name of the database
         public BookstoreDbContext() : base("IndyBooksMultipleTablesDB") { }
 
-     // Entity representing all the books
+        // Entity representing all the books
         public DbSet<Book> Books { get; set; }
 
-      // Entity representing store members
+        // Entity representing store members
         public DbSet<Member> Members { get; set; }
 
-     // Entity representing purchases
+        // Entity representing purchases
         public DbSet<Purchase> Purchases { get; set; }
+
+        // Entity respresenting Authors
+        public DbSet<Author> Authors { get; set; }
+
+
+
 
 
 
