@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using IndyBooks.Models;
+using IndyBooks.ViewModels;
 
 namespace IndyBooks.Controllers
 {
@@ -16,7 +17,10 @@ namespace IndyBooks.Controllers
          */
         public ActionResult Purchase()
         {
-             return View();
+            var pvm = new PurchaseViewModel();
+            pvm.Books = db.Books;
+            pvm.Members = db.Members;
+             return View(pvm);
         }
         [HttpPost]
         public ActionResult Purchase(Purchase purchase)

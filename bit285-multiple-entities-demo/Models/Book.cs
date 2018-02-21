@@ -12,8 +12,7 @@ namespace IndyBooks.Models
         public int BookID { get; set; }         //Database requires a Primary Key field
         [Required]
         public string Title { get; set; }
-        [Required]
-        public string Author { get; set; }
+        public int AuthorID { get; set; }
         public string Edition { get; set; }
         [Required]
         [DataType(DataType.Currency)]

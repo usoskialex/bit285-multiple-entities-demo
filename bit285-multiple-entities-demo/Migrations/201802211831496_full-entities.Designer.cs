@@ -7,18 +7,18 @@ namespace bit285_multiple_entities_demo.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class purchase : IMigrationMetadata
+    public sealed partial class fullentities : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(purchase));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(fullentities));
         
         string IMigrationMetadata.Id
         {
-            get { return "201802192330219_purchase"; }
+            get { return "201802211831496_full-entities"; }
         }
         
         string IMigrationMetadata.Source
         {
-            get { return Resources.GetString("Source"); }
+            get { return null; }
         }
         
         string IMigrationMetadata.Target

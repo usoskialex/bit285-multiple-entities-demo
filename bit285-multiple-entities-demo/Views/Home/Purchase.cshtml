@@ -15,14 +15,17 @@
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
-            @Html.DropDownListFor(model => model.MemberID, new SelectList(Model.Members, "MemberID", "Name"), new { htmlAttributes = new { @class = "form-control" } })
-
-            @Html.DropDownListFor(model => model.BookID, new SelectList(Model.Books, "BookID", "Title"), new { htmlAttributes = new { @class = "form-control" } })
-
-
-            @Html.LabelFor(model => model.Amount, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Amount, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.Label("Member ")
+                @Html.DropDownListFor(model => model.MemberID, new SelectList(Model.Members, "MemberID", "Name"), new { @class = "form-control" })
+            </div>
+            <div class="col-md-10">
+                @Html.Label("Book ")
+                @Html.DropDownListFor(model => model.BookID, new SelectList(Model.Books, "BookID", "Title"), new { @class = "form-control"})
+            </div>
+            <div class="col-md-10">
+                @Html.LabelFor(model => model.Amount, htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.EditorFor(model => model.Amount, new { htmlAttributes = new { @class = "form-control" }})
                 @Html.ValidationMessageFor(model => model.Amount, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -34,10 +37,6 @@
         </div>
     </div>
 }
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
 
 <script src="~/Scripts/jquery-1.10.2.min.js"></script>
 <script src="~/Scripts/jquery.validate.min.js"></script>
