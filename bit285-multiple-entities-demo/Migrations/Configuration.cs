@@ -61,7 +61,7 @@ namespace bit285_multiple_entities_demo.Migrations
                     Price = 9.95M
 
                 });
-            //TODO: Add several Author records
+            // Added several Author records
             context.Authors.AddOrUpdate(a => a.AuthorID,
                 new Author()
                 {
@@ -81,6 +81,7 @@ namespace bit285_multiple_entities_demo.Migrations
                     FirstName = "Ursula",
                     LastName = "Le Guin"
                 });
+            //TODO: Seed a few more Member records
             context.Members.AddOrUpdate(m => m.MemberID,
                 new Member()
                 {
@@ -88,7 +89,7 @@ namespace bit285_multiple_entities_demo.Migrations
                     FirstName = "Ian",
                     LastName = "Bansenauer"
                 });
-            //TODO: Add additional Purchase records
+            //TODO: Seed a few more Purchase records
             context.Purchases.AddOrUpdate(p => p.PurchaseID,
                 new Purchase()
                 {

@@ -17,10 +17,11 @@ namespace IndyBooks.Controllers
          */
         public ActionResult Purchase()
         {
-            var pvm = new PurchaseViewModel();
-            pvm.Books = db.Books;
+            var pvm = new PurchaseViewModel();  // create a new viewmodel object and
+            pvm.Books = db.Books;               // assign values to viewmodel collections
             pvm.Members = db.Members;
-             return View(pvm);
+
+            return View(pvm);
         }
         [HttpPost]
         public ActionResult Purchase(Purchase purchase)
@@ -35,7 +36,6 @@ namespace IndyBooks.Controllers
         }
         /*
          * Book Creation and List
-         * TODO: Update methods and Views to Book create and list Books 
          */
         public ActionResult AddBook()
         {
@@ -45,15 +45,14 @@ namespace IndyBooks.Controllers
         [HttpPost]
         public ActionResult AddBook(Book book)
         {
+            if (ModelState.IsValid)
+            {
+                db.Books.Add(book);
+                db.SaveChanges();
+                return View("Books", db.Books);
+            }
             return View();
         }
-        /*
-          * Author Creation and List
-          * TODO: Develop methods and Views to create and list Authors 
-          */
-        /*
-          * Member Creation and List
-          * TODO: Develop methods and Views to create and list Members 
-          */
+
     }
 }
