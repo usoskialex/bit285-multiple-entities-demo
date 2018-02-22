@@ -22,5 +22,7 @@ namespace IndyBooks.Models
 
         // Property to represent the entity relationship: "A Book can have many Purchases"
         public virtual ICollection<Purchase> SalesHistory { get; set; }
+
+        //TODO: Add a Navigation Property for the book Author
     }
 }
