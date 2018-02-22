@@ -145,7 +145,6 @@
     <Compile Include="Models\Purchase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\PurchaseViewModel.cs" />
-    <Compile Include="ViewModels\SalesViewModel.cs" />
     <Compile Include="ViewModels\SearchViewModel.cs" />
   </ItemGroup>
   <ItemGroup>

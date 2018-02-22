@@ -14,5 +14,7 @@ namespace IndyBooks.Models
         public int BookID { get; set; }     // The book purchased
         public int MemberID { get; set; }   // The customer
 
+        public virtual Book Book { get; set; } //A 
+
     }
 }

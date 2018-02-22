@@ -17,8 +17,8 @@ namespace IndyBooks.Controllers
          */
         public ActionResult Purchase()
         {
-            var pvm = new PurchaseViewModel();  // create a new viewmodel object and
-            pvm.Books = db.Books;               // assign values to viewmodel collections
+            var pvm = new PurchaseViewModel();  // creates a new viewmodel object and
+            pvm.Books = db.Books;               // assigns values to viewmodel collections
             pvm.Members = db.Members;
 
             return View(pvm);
