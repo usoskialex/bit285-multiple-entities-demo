@@ -1,21 +1,21 @@
 ﻿@model IEnumerable<IndyBooks.Models.Purchase>
 
 @{
-    ViewBag.Title = "Purchases";
+    ViewBag.Title = "Sales";
 }
-<h2>View Sales</h2>
+<h2>Sales</h2>
 
 <span class="sub-link">
-    @Html.ActionLink("New Sale", "Purchase")
+    @Html.ActionLink("New Purchase", "Purchase")
 </span>
 <hr />
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Amount)
+            @Html.DisplayNameFor(model => model.Book.Title)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.BookID)
+            @Html.DisplayNameFor(model => model.Amount)
         </th>
         <th></th>
     </tr>
@@ -24,10 +24,10 @@
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Amount)
+                @Html.DisplayFor(modelItem => item.Book.Title)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.BookID)
+                @Html.DisplayFor(modelItem => item.Amount)
             </td>
         </tr>
     }
