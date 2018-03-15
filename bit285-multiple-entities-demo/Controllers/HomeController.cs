@@ -54,12 +54,12 @@ namespace IndyBooks.Controllers
           * Author Creation and List
           * TODO: Develop methods and Views to create and list Authors 
           */
-        public ActionResult AddAuthors()
+        public ActionResult AddAuthor()
         {
             return View();
         }
         [HttpPost]
-        public ActionResult AddAuthors(Author author)
+        public ActionResult AddAuthor(Author author)
         {
              if (ModelState.IsValid)
              {
