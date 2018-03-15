@@ -88,13 +88,52 @@ namespace bit285_multiple_entities_demo.Migrations
                     MemberID = 1,
                     FirstName = "Ian",
                     LastName = "Bansenauer"
+                },
+                new Member()
+                {
+                    MemberID = 2,
+                    FirstName = "Alex",
+                    LastName = "Usoski"
+                },
+                new Member()
+                {
+                    MemberID = 3,
+                    FirstName = "Emilio",
+                    LastName = "Bro"
+                },
+                new Member()
+                {
+                    MemberID = 4,
+                    FirstName = "Ben",
+                    LastName = "Bell"
                 });
             //TODO: Seed a few more Purchase records
             context.Purchases.AddOrUpdate(p => p.PurchaseID,
                 new Purchase()
                 {
                     PurchaseID = 1,
-                    Amount = 10.00M,
+                    Amount = 9.99M,
+                    BookID = 1,
+                    MemberID = 1
+                },
+                new Purchase()
+                {
+                    PurchaseID = 2,
+                    Amount = 12.95M,
+                    BookID = 2,
+                    MemberID = 1
+                },
+                new Purchase()
+                {
+                    PurchaseID = 3,
+                    Amount = 7.95M,
+                    BookID = 5,
+                    MemberID = 1
+                },
+                new Purchase()
+                {
+                    PurchaseID = 4,
+                    Amount = 9.95M,
                     BookID = 6,
                     MemberID = 1
                 });

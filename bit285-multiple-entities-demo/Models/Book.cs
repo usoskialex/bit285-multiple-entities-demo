@@ -24,5 +24,6 @@ namespace IndyBooks.Models
         public virtual ICollection<Purchase> SalesHistory { get; set; }
 
         //TODO: Add a Navigation Property for the book Author
+
     }
 }
