@@ -14,12 +14,13 @@ namespace IndyBooks.Controllers
         /*
          * Purchase Creation and List
          */
-        public ActionResult Purchase()
+        public ActionResult Purchases()
         {
-             return View();
+            Purchase purchase = new Purchase();
+             return View(purchase);
         }
         [HttpPost]
-        public ActionResult Purchase(Purchase purchase)
+        public ActionResult Purchases(Purchase purchase)
         {
             if (ModelState.IsValid)
             {
