@@ -1,4 +1,7 @@
-﻿@model IndyBooks.Models.Book
+﻿@*@model IndyBooks.Models.Book*@
+
+@model IndyBooks.ViewModels.AddBookViewModel
+
 @{
     //TODO: Modify the AddBook View to use a new AddBookViewModel
     ViewBag.Title = "Lambda Expression Demo";
@@ -13,10 +16,15 @@
     </div>
     <div class="form-group">
         <!-- TODO: Update the AddBook View to include a Dropdown List for Authors -->
+        @Html.Label("Author")
+        @Html.DropDownListFor(m => m.AuthorID, new SelectList(Model.Author, "AuthorID", "Name"), new { @class = "form-control" })
+
+
         @Html.LabelFor(m => m.AuthorID)
         @Html.EditorFor(m => m.AuthorID)
         @Html.ValidationMessageFor(m => m.AuthorID, "*")
     </div>
+
     <div class="form-group">
         @Html.LabelFor(m => m.Edition)
         @Html.EditorFor(m => m.Edition)

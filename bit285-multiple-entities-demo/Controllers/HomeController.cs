@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using IndyBooks.Models;
 using IndyBooks.ViewModels;
+using IndyBooks.Models;
 
 namespace IndyBooks.Controllers
 {
@@ -40,8 +40,11 @@ namespace IndyBooks.Controllers
         public ActionResult AddBook()
         {
             //TODO: Create a new ViewModel object, assign values to its collections, and pass it to the View
+            AddBookViewModel abinst = new AddBookViewModel();
+            abinst.Author = db.Authors;
 
-            return View();
+
+            return View(abinst);
         }
 
         [HttpPost]
@@ -56,6 +59,14 @@ namespace IndyBooks.Controllers
             //TODO: Update your Book Listing  View to display the Authors Full Name, rather than the AuthorID
             return View();
         }
+
+
+        [HttpGet]
+        public ActionResult Books(Book book)
+        {
+            return View(book);
+        }
+
 
     }
 }
